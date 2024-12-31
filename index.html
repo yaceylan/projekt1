@@ -15,6 +15,24 @@
         padding: 0px 100px;
     }
 </style>
+<script>
+
+    function addTodo(){}
+
+    todolist.innerHTML += `
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        <i class="material-icons  mdl-list__item-avatar">label</i>
+        Todo 1
+      </span>
+      <span class="mdl-list__item-secondary-action">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+          <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+        </label>
+      </span>
+    </li>
+    `;
+</script>
 </head>
 <body>
     	
@@ -49,31 +67,21 @@
 
       <!-- Textfield with Floating Label -->
 
-<form action="#">
+<form onsubmit="addTodo()">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="text" id="sample3">
-      <label class="mdl-textfield__label" for="sample3">To do einfügen</label>
+      <input class="mdl-textfield__input" type="text" id="todofield">
+      <label class="mdl-textfield__label" for="todofield">To do einfügen</label>
     </div>
 
    
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
     Speichern
   </button>
 
   </form>
 
-  <ul class="demo-list-control mdl-list">
-    <li class="mdl-list__item">
-      <span class="mdl-list__item-primary-content">
-        <i class="material-icons  mdl-list__item-avatar">label</i>
-        Todo 1
-      </span>
-      <span class="mdl-list__item-secondary-action">
-        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
-          <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
-        </label>
-      </span>
-    </li>
+  <ul class="demo-list-control mdl-list" id="todolist">
+    
   </ul>
 
     </div>
